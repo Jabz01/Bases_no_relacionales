@@ -1,0 +1,10 @@
+{
+  "_id": {
+    "$oid": "6a35ae5426929b2757282de1"
+  },
+  "id": 1,
+  "documento_identidad": "10023456",
+  "nombre": "Carlos Mario Restrepo",
+  "correo": "cmrestrepo@ucaldas.edu.co",
+  "departamento": "Ingenieria"
+}

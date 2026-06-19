@@ -1,0 +1,26 @@
+[
+    {
+  "_id": {
+    "$oid": "6a35a70226929b2757282db3"
+  },
+  "id": 1,
+  "nombre": "Bases de Datos I",
+  "creditos": 3,
+  "semestre_sugerido": 4,
+  "planes": [
+    1
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a35a69a26929b2757282db2"
+  },
+  "id": 2,
+  "nombre": "Bases de Datos II",
+  "creditos": 4,
+  "semestre_sugerido": 5,
+  "planes": [
+    1
+  ]
+}
+]

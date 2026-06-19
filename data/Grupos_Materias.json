@@ -1,0 +1,30 @@
+[
+    {
+  "_id": {
+    "$oid": "6a35abe326929b2757282dde"
+  },
+  "id": 1,
+  "materia": {
+    "id": 1,
+    "nombre": "Bases de datos I"
+  },
+  "periodo": "2026-1",
+  "docente_id": 1,
+  "cupos_totales": 30,
+  "cupos_disponibles": 24,
+  "horario": [
+    {
+      "dia": "Lunes",
+      "hora_inicio": "08:00",
+      "hora_fin": "10:00",
+      "salon": "Lab 302"
+    },
+    {
+      "dia": "Miércoles",
+      "hora_inicio": "08:00",
+      "hora_fin": "10:00",
+      "salon": "Lab 302"
+    }
+  ]
+}
+]

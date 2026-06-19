@@ -1,0 +1,40 @@
+[
+    {
+  "_id": {
+    "$oid": "6a35a95926929b2757282dc7"
+  },
+  "estudiante_id": 1,
+  "plan": {
+    "id": 1,
+    "nombre": "Ingeniería de Sistemas y Computación"
+  },
+  "materias": [
+    {
+      "id": 1,
+      "estudiante_id": 1,
+      "materia": {
+        "id": 1,
+        "nombre": "Bases de datos I",
+        "creditos": 3
+      },
+      "grupo_id": 1,
+      "nota_final": 4.2,
+      "inscripcion": 1,
+      "periodo": "2025-2",
+      "estado": "Aprobada"
+    },
+    {
+      "id": 2,
+      "estudiante_id": 1,
+      "materia": {
+        "id": 2,
+        "nombre": "Bases de datos II",
+        "creditos": 4
+      },
+      "inscripcion": 2,
+      "periodo": "2026-1",
+      "estado": "En curso"
+    }
+  ]
+}
+]
