@@ -40,7 +40,55 @@
         "nota_final": 4.6,
         "periodo": "2025-2",
         "estado": "aprobada"
-      }
+      },
+      {
+        "id": 4,
+        "materia": {
+          "id": 12,
+          "nombre": "Mecánica Clásica",
+          "creditos": 4
+        },
+        "grupo_id": 2,
+        "nota_final": 3.5,
+        "periodo": "2023-2",
+        "estado": "aprobada"
+      },
+      {
+        "id": 5,
+        "materia": {
+          "id": 10,
+          "nombre": "Cálculo Integral",
+          "creditos": 4
+        },
+        "grupo_id": 2,
+        "nota_final": 3.0,
+        "periodo": "2023-1",
+        "estado": "aprobada"
+      },
+      {
+        "id": 6,
+        "materia": {
+          "id": 9,
+          "nombre": "Cálculo Diferencial",
+          "creditos": 4
+        },
+        "grupo_id": 1,
+        "nota_final": 4.0,
+        "periodo": "2022-2",
+        "estado": "aprobada"
+      },
+      {
+        "id": 7,
+        "materia": {
+          "id": 11,
+          "nombre": "Algebra Lineal",
+          "creditos": 3
+        },
+        "grupo_id": 3,
+        "nota_final": 4.0,
+        "periodo": "2023-1",
+        "estado": "aprobada"
+      }   
     ]
   },
   {
