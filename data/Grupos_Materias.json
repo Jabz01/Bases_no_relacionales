@@ -1,30 +1,171 @@
 [
-    {
-  "_id": {
-    "$oid": "6a35abe326929b2757282dde"
-  },
-  "id": 1,
-  "materia": {
+  {
     "id": 1,
-    "nombre": "Bases de datos I"
-  },
-  "periodo": "2026-1",
-  "docente_id": 1,
-  "cupos_totales": 30,
-  "cupos_disponibles": 24,
-  "horario": [
-    {
-      "dia": "Lunes",
-      "hora_inicio": "08:00",
-      "hora_fin": "10:00",
-      "salon": "Lab 302"
+    "materia": {
+      "id": 1,
+      "nombre": "Bases de datos I"
     },
-    {
-      "dia": "Miércoles",
-      "hora_inicio": "08:00",
-      "hora_fin": "10:00",
-      "salon": "Lab 302"
-    }
-  ]
-}
+    "periodo": "2026-1",
+    "docente_id": 1,
+    "cupos_totales": 30,
+    "inscritos": [1],
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "salon": "Lab 302"
+      },
+      {
+        "dia": "Miércoles",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "salon": "Lab 302"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "materia": {
+      "id": 13,
+      "nombre": "Electromagnetismo"
+    },
+    "periodo": "2026-1",
+    "docente_id": 2,
+    "cupos_totales": 35,
+    "inscritos": [1, 2],
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora_inicio": "10:00",
+        "hora_fin": "12:00",
+        "salon": "Bloque E-201"
+      },
+      {
+        "dia": "Jueves",
+        "hora_inicio": "10:00",
+        "hora_fin": "12:00",
+        "salon": "Bloque E-201"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "materia": {
+      "id": 5,
+      "nombre": "Procesamiento Digital de Señales"
+    },
+    "periodo": "2026-1",
+    "docente_id": 3,
+    "cupos_totales": 25,
+    "inscritos": [],
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora_inicio": "14:00",
+        "hora_fin": "16:00",
+        "salon": "Lab DSP-1"
+      },
+      {
+        "dia": "Viernes",
+        "hora_inicio": "14:00",
+        "hora_fin": "16:00",
+        "salon": "Lab DSP-1"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "materia": {
+      "id": 8,
+      "nombre": "Diseño Mecánico"
+    },
+    "periodo": "2026-1",
+    "docente_id": 4,
+    "cupos_totales": 28,
+    "inscritos": [],
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "salon": "MEC-103"
+      },
+      {
+        "dia": "Jueves",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "salon": "MEC-103"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "materia": {
+      "id": 11,
+      "nombre": "Ecuaciones Diferenciales"
+    },
+    "periodo": "2026-1",
+    "docente_id": 4,
+    "cupos_totales": 40,
+    "inscritos": [],
+    "horario": [
+      {
+        "dia": "Lunes",
+        "hora_inicio": "16:00",
+        "hora_fin": "18:00",
+        "salon": "Aula M-204"
+      },
+      {
+        "dia": "Miércoles",
+        "hora_inicio": "16:00",
+        "hora_fin": "18:00",
+        "salon": "Aula M-204"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "materia": {
+      "id": 14,
+      "nombre": "Física Cuántica"
+    },
+    "periodo": "2026-1",
+    "docente_id": 1,
+    "cupos_totales": 22,
+    "inscritos": [4],
+    "horario": [
+      {
+        "dia": "Martes",
+        "hora_inicio": "18:00",
+        "hora_fin": "20:00",
+        "salon": "FIS-401"
+      },
+      {
+        "dia": "Viernes",
+        "hora_inicio": "18:00",
+        "hora_fin": "20:00",
+        "salon": "FIS-401"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "materia": {
+      "id": 20,
+      "nombre": "Operaciones Unitarias"
+    },
+    "periodo": "2026-1",
+    "docente_id": 2,
+    "cupos_totales": 30,
+    "inscritos": [],
+    "horario": [
+      {
+        "dia": "Miércoles",
+        "hora_inicio": "07:00",
+        "hora_fin": "10:00",
+        "salon": "Q-205"
+      }
+    ]
+  }
 ]

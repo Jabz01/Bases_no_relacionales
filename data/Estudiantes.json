@@ -1,8 +1,27 @@
-{
-  "_id": {
-    "$oid": "6a35a76c26929b2757282db5"
+[
+  {
+    "id": 1,
+    "nombre": "Jeronimo D'Vago",
+    "estado": "activo"
   },
-  "id": 1,
-  "nombre": "Jeronimo D'Vago",
-  "estado": "Activo"
-}
+  {
+    "id": 2,
+    "nombre": "Alex G",
+    "estado": "activo"
+  },
+  {
+    "id": 3,
+    "nombre": "Maria Luna",
+    "estado": "activo"
+  },
+  {
+    "id": 4,
+    "nombre": "Pancho Mironov",
+    "estado": "activo"
+  },
+  {
+    "id": 5,
+    "nombre": "Jackson Quintero",
+    "estado": "activo"
+  }
+]

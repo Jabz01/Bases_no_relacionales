@@ -1,26 +1,206 @@
 [
-    {
-  "_id": {
-    "$oid": "6a35a70226929b2757282db3"
+  {
+    "id": 1,
+    "nombre": "Bases de Datos I",
+    "creditos": 3,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 1,
+        "nombre": "Ingeniería de Sistemas y Computación"
+      }
+    ]
   },
-  "id": 1,
-  "nombre": "Bases de Datos I",
-  "creditos": 3,
-  "semestre_sugerido": 4,
-  "planes": [
-    1
-  ]
-},
-{
-  "_id": {
-    "$oid": "6a35a69a26929b2757282db2"
+  {
+    "id": 2,
+    "nombre": "Bases de Datos II",
+    "creditos": 4,
+    "semestre_sugerido": 5,
+    "planes": [
+      {
+        "id": 1,
+        "nombre": "Ingeniería de Sistemas y Computación"
+      }
+    ]
   },
-  "id": 2,
-  "nombre": "Bases de Datos II",
-  "creditos": 4,
-  "semestre_sugerido": 5,
-  "planes": [
-    1
-  ]
-}
+  {
+    "id": 3,
+    "nombre": "Circuitos I",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 2,
+        "nombre": "Ingeniería Electrónica"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Circuitos II",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 2,
+        "nombre": "Ingeniería Electrónica"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Procesamiento Digital de Señales",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 2,
+        "nombre": "Ingeniería Electrónica"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Estática",
+    "creditos": 3,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 3,
+        "nombre": "Ingeniería Mecánica"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Dinámica",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 3,
+        "nombre": "Ingeniería Mecánica"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Diseño Mecánico",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 3,
+        "nombre": "Ingeniería Mecánica"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Cálculo Diferencial",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 4,
+        "nombre": "Matemáticas"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Cálculo Integral",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 4,
+        "nombre": "Matemáticas"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Algebra Lineal",
+    "creditos": 3,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 4,
+        "nombre": "Matemáticas"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Mecánica Clásica",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 5,
+        "nombre": "Física"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Electromagnetismo",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 5,
+        "nombre": "Física"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Física Cuántica",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 5,
+        "nombre": "Física"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Química General",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 7,
+        "nombre": "Ingeniería Química"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Termodinámica",
+    "creditos": 4,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 7,
+        "nombre": "Ingeniería Química"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Operaciones Unitarias",
+    "creditos": 5,
+    "semestre_sugerido": 4,
+    "planes": [
+      {
+        "id": 7,
+        "nombre": "Ingeniería Química"
+      }
+    ]
+  }
 ]

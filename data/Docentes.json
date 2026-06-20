@@ -1,10 +1,37 @@
-{
-  "_id": {
-    "$oid": "6a35ae5426929b2757282de1"
+[
+  {
+    "id": 1,
+    "documento_identidad": "123456",
+    "nombre": "Carlos Mario Restrepo",
+    "correo": "cmrestrepo@ucaldas.edu.co",
+    "departamento": "Ingeniería"
   },
-  "id": 1,
-  "documento_identidad": "10023456",
-  "nombre": "Carlos Mario Restrepo",
-  "correo": "cmrestrepo@ucaldas.edu.co",
-  "departamento": "Ingenieria"
-}
+  {
+    "id": 2,
+    "documento_identidad": "123456",
+    "nombre": "Daniel Linsano",
+    "correo": "danielinsano@ucaldas.edu.co",
+    "departamento": "Ingeniería"
+  },
+  {
+    "id": 3,
+    "documento_identidad": "123456",
+    "nombre": "Pepita Jimenez",
+    "correo": "jimepepita5534@ucaldas.edu.co",
+    "departamento": "Física"
+  },
+  {
+    "id": 4,
+    "documento_identidad": "123456",
+    "nombre": "Melva Quintero",
+    "correo": "doñamelva123@ucaldas.edu.co",
+    "departamento": "Matemáticas"
+  },
+  {
+    "id": 5,
+    "documento_identidad": "123456",
+    "nombre": "Natalia Verde",
+    "correo": "nataliaverde@ucaldas.edu.co",
+    "departamento": "Filosofía"
+  }
+]

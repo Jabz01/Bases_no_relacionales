@@ -1,40 +1,155 @@
 [
-    {
-  "_id": {
-    "$oid": "6a35a95926929b2757282dc7"
-  },
-  "estudiante_id": 1,
-  "plan": {
-    "id": 1,
-    "nombre": "Ingeniería de Sistemas y Computación"
-  },
-  "materias": [
-    {
+  {
+    "estudiante_id": 1,
+    "plan": {
       "id": 1,
-      "estudiante_id": 1,
-      "materia": {
-        "id": 1,
-        "nombre": "Bases de datos I",
-        "creditos": 3
-      },
-      "grupo_id": 1,
-      "nota_final": 4.2,
-      "inscripcion": 1,
-      "periodo": "2025-2",
-      "estado": "Aprobada"
+      "nombre": "Ingeniería de Sistemas y Computación"
     },
-    {
-      "id": 2,
-      "estudiante_id": 1,
-      "materia": {
-        "id": 2,
-        "nombre": "Bases de datos II",
-        "creditos": 4
+    "cursos": [
+      {
+        "id": 1,
+        "materia": {
+          "id": 13,
+          "nombre": "Electromagnetismo",
+          "creditos": 4
+        },
+        "grupo_id": 2,
+        "nota_final": 2.7,
+        "periodo": "2024-1",
+        "estado": "reprobada"
       },
-      "inscripcion": 2,
-      "periodo": "2026-1",
-      "estado": "En curso"
-    }
-  ]
-}
+      {
+        "id": 2,
+        "materia": {
+          "id": 1,
+          "nombre": "Bases de datos I",
+          "creditos": 3
+        },
+        "grupo_id": 1,
+        "periodo": "2025-2",
+        "estado": "en curso"
+      },
+      {
+        "id": 3,
+        "materia": {
+          "id": 13,
+          "nombre": "Electromagnetismo",
+          "creditos": 4
+        },
+        "grupo_id": 2,
+        "nota_final": 4.6,
+        "periodo": "2025-2",
+        "estado": "aprobada"
+      }
+    ]
+  },
+  {
+    "estudiante_id": 2,
+    "plan": {
+      "id": 2,
+      "nombre": "Ingeniería de Sistemas y Computación"
+    },
+    "cursos": [
+      {
+        "id": 4,
+        "materia": {
+          "id": 3,
+          "nombre": "Electromagnetismo",
+          "creditos": 4
+        },
+        "grupo_id": 2,
+        "nota_final": 1.8,
+        "periodo": "2025-1",
+        "estado": "reprobada"
+      }
+    ]
+  },
+  {
+    "estudiante_id": 3,
+    "plan": {
+      "id": 4,
+      "nombre": "Matemáticas"
+    },
+    "cursos": [
+      {
+        "id": 6,
+        "materia": {
+          "id": 9,
+          "nombre": "Cálculo Diferencial",
+          "creditos": 4
+        },
+        "grupo_id": 5,
+        "nota_final": 4.2,
+        "periodo": "2024-2",
+        "estado": "aprobada"
+      },
+      {
+        "id": 7,
+        "materia": {
+          "id": 10,
+          "nombre": "Cálculo Integral",
+          "creditos": 4
+        },
+        "grupo_id": 5,
+        "nota_final": 2.9,
+        "periodo": "2025-1",
+        "estado": "reprobada"
+      },
+      {
+        "id": 8,
+        "materia": {
+          "id": 10,
+          "nombre": "Cálculo Integral",
+          "creditos": 4
+        },
+        "grupo_id": 5,
+        "periodo": "2026-1",
+        "estado": "aprobada"
+      }
+    ]
+  },
+  {
+    "estudiante_id": 4,
+    "plan": {
+      "id": 5,
+      "nombre": "Física"
+    },
+    "cursos": [
+      {
+        "id": 9,
+        "materia": {
+          "id": 12,
+          "nombre": "Mecánica Clásica",
+          "creditos": 4
+        },
+        "grupo_id": 6,
+        "nota_final": 4.4,
+        "periodo": "2024-1",
+        "estado": "aprobada"
+      },
+      {
+        "id": 10,
+        "materia": {
+          "id": 13,
+          "nombre": "Electromagnetismo",
+          "creditos": 4
+        },
+        "grupo_id": 6,
+        "nota_final": 3.7,
+        "periodo": "2025-1",
+        "estado": "aprobada"
+      },
+      {
+        "id": 11,
+        "materia": {
+          "id": 14,
+          "nombre": "Física Cuántica",
+          "creditos": 4
+        },
+        "grupo_id": 6,
+        "periodo": "2026-1",
+        "estado": "en curso"
+      }
+    ]
+  }
 ]

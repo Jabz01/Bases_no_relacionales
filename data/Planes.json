@@ -1,28 +1,182 @@
-
 [
-{
-  "_id": {
-    "$oid": "6a35a65a26929b2757282db0"
+  {
+    "id": 1,
+    "nombre": "Ingeniería de Sistemas y Computación",
+    "creditos_totales": 160,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 9,
+        "nombre": "Cálculo Diferencial",
+        "creditos": 4,
+        "prerrequisitos": []
+      },
+      {
+        "id": 10,
+        "nombre": "Cálculo Integral",
+        "creditos": 4,
+        "prerrequisitos": [9]
+      },
+      {
+        "id": 11,
+        "nombre": "Algebra Lineal",
+        "creditos": 3,
+        "prerrequisitos": [9]
+      },
+      {
+        "id": 1,
+        "nombre": "Bases de Datos I",
+        "creditos": 3,
+        "prerrequisitos": [11]
+      },
+      {
+        "id": 2,
+        "nombre": "Bases de Datos II",
+        "creditos": 4,
+        "prerrequisitos": [1]
+      },
+      {
+        "id": 12,
+        "nombre": "Mecánica Clásica",
+        "creditos": 4,
+        "prerrequisitos": [10]
+      },
+      {
+        "id": 13,
+        "nombre": "Electromagnetismo",
+        "creditos": 4,
+        "prerrequisitos": [12]
+      }
+    ]
   },
-  "id": 1,
-  "nombre": "Ingeniería de Sistemas y Computación",
-  "creditos_totales": 160,
-  "version": "2025-1",
-  "materias": [
-    {
-      "id": 2,
-      "nombre": "Bases de Datos II",
-      "creditos": 4,
-      "prerrequisitos": [
-        1
-      ]
-    },
-    {
-      "id": 1,
-      "nombre": "Bases de Datos I",
-      "creditos": 3,
-      "prerrequisitos": []
-    }
-  ]
-}
+  {
+    "id": 2,
+    "nombre": "Ingeniería Electrónica",
+    "creditos_totales": 170,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 3,
+        "nombre": "Circuitos I",
+        "creditos": 4,
+        "prerrequisitos": []
+      },
+      {
+        "id": 4,
+        "nombre": "Circuitos II",
+        "creditos": 4,
+        "prerrequisitos": [3]
+      },
+      {
+        "id": 5,
+        "nombre": "Procesamiento Digital de Señales",
+        "creditos": 4,
+        "prerrequisitos": [4]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Ingeniería Mecánica",
+    "creditos_totales": 165,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 6,
+        "nombre": "Estática",
+        "creditos": 3,
+        "prerrequisitos": []
+      },
+      {
+        "id": 7,
+        "nombre": "Dinámica",
+        "creditos": 4,
+        "prerrequisitos": [6]
+      },
+      {
+        "id": 8,
+        "nombre": "Diseño Mecánico",
+        "creditos": 4,
+        "prerrequisitos": [7]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Matemáticas",
+    "creditos_totales": 150,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 9,
+        "nombre": "Cálculo Diferencial",
+        "creditos": 4,
+        "prerrequisitos": []
+      },
+      {
+        "id": 10,
+        "nombre": "Cálculo Integral",
+        "creditos": 4,
+        "prerrequisitos": [9]
+      },
+      {
+        "id": 11,
+        "nombre": "Algebra Lineal",
+        "creditos": 3,
+        "prerrequisitos": [9]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Física",
+    "creditos_totales": 155,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 12,
+        "nombre": "Mecánica Clásica",
+        "creditos": 4,
+        "prerrequisitos": []
+      },
+      {
+        "id": 13,
+        "nombre": "Electromagnetismo",
+        "creditos": 4,
+        "prerrequisitos": [12]
+      },
+      {
+        "id": 14,
+        "nombre": "Física Cuántica",
+        "creditos": 4,
+        "prerrequisitos": [13]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Ingeniería Química",
+    "creditos_totales": 168,
+    "version": "2025-1",
+    "materias": [
+      {
+        "id": 15,
+        "nombre": "Química General",
+        "creditos": 4,
+        "prerrequisitos": []
+      },
+      {
+        "id": 16,
+        "nombre": "Termodinámica",
+        "creditos": 4,
+        "prerrequisitos": [18]
+      },
+      {
+        "id": 17,
+        "nombre": "Operaciones Unitarias",
+        "creditos": 5,
+        "prerrequisitos": [19]
+      }
+    ]
+  }
 ]
