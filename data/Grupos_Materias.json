@@ -12,14 +12,14 @@
     "horario": [
       {
         "dia": "Lunes",
-        "hora_inicio": "08:00",
-        "hora_fin": "10:00",
+        "hora_inicio": 800,
+        "hora_fin": 1000,
         "salon": "Lab 302"
       },
       {
         "dia": "Miércoles",
-        "hora_inicio": "08:00",
-        "hora_fin": "10:00",
+        "hora_inicio": 800,
+        "hora_fin": 1000,
         "salon": "Lab 302"
       }
     ]
@@ -37,14 +37,14 @@
     "horario": [
       {
         "dia": "Martes",
-        "hora_inicio": "10:00",
-        "hora_fin": "12:00",
+        "hora_inicio": 1000,
+        "hora_fin": 1200,
         "salon": "Bloque E-201"
       },
       {
         "dia": "Jueves",
-        "hora_inicio": "10:00",
-        "hora_fin": "12:00",
+        "hora_inicio": 1000,
+        "hora_fin": 1200,
         "salon": "Bloque E-201"
       }
     ]
@@ -62,14 +62,14 @@
     "horario": [
       {
         "dia": "Lunes",
-        "hora_inicio": "14:00",
-        "hora_fin": "16:00",
+        "hora_inicio": 1400,
+        "hora_fin": 1600,
         "salon": "Lab DSP-1"
       },
       {
         "dia": "Viernes",
-        "hora_inicio": "14:00",
-        "hora_fin": "16:00",
+        "hora_inicio": 1400,
+        "hora_fin": 1600,
         "salon": "Lab DSP-1"
       }
     ]
@@ -87,14 +87,14 @@
     "horario": [
       {
         "dia": "Martes",
-        "hora_inicio": "08:00",
-        "hora_fin": "10:00",
+        "hora_inicio": 800,
+        "hora_fin": 1000,
         "salon": "MEC-103"
       },
       {
         "dia": "Jueves",
-        "hora_inicio": "08:00",
-        "hora_fin": "10:00",
+        "hora_inicio": 800,
+        "hora_fin": 1000,
         "salon": "MEC-103"
       }
     ]
@@ -112,14 +112,14 @@
     "horario": [
       {
         "dia": "Lunes",
-        "hora_inicio": "16:00",
-        "hora_fin": "18:00",
+        "hora_inicio": 1600,
+        "hora_fin": 1800,
         "salon": "Aula M-204"
       },
       {
         "dia": "Miércoles",
-        "hora_inicio": "16:00",
-        "hora_fin": "18:00",
+        "hora_inicio": 1600,
+        "hora_fin": 1800,
         "salon": "Aula M-204"
       }
     ]
@@ -137,14 +137,14 @@
     "horario": [
       {
         "dia": "Martes",
-        "hora_inicio": "18:00",
-        "hora_fin": "20:00",
+        "hora_inicio": 1800,
+        "hora_fin": 2000,
         "salon": "FIS-401"
       },
       {
         "dia": "Viernes",
-        "hora_inicio": "18:00",
-        "hora_fin": "20:00",
+        "hora_inicio": 1800,
+        "hora_fin": 2000,
         "salon": "FIS-401"
       }
     ]
@@ -162,8 +162,8 @@
     "horario": [
       {
         "dia": "Miércoles",
-        "hora_inicio": "07:00",
-        "hora_fin": "10:00",
+        "hora_inicio": 700,
+        "hora_fin": 1000,
         "salon": "Q-205"
       }
     ]

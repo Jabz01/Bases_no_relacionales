@@ -46,14 +46,14 @@
   {
     "estudiante_id": 2,
     "plan": {
-      "id": 2,
+      "id": 1,
       "nombre": "Ingeniería de Sistemas y Computación"
     },
     "cursos": [
       {
         "id": 4,
         "materia": {
-          "id": 3,
+          "id": 13,
           "nombre": "Electromagnetismo",
           "creditos": 4
         },
