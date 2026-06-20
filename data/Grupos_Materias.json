@@ -167,5 +167,43 @@
         "salon": "Q-205"
       }
     ]
+  },
+    {
+    "id": 8,
+    "materia": {
+      "id": 20,
+      "nombre": "Operaciones Unitarias"
+    },
+    "periodo": "2026-1",
+    "docente_id": 1,
+    "cupos_totales": 1,
+    "inscritos": [1],
+    "horario": [
+      {
+        "dia": "Miércoles",
+        "hora_inicio": 700,
+        "hora_fin": 1000,
+        "salon": "Q-205"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "materia": {
+      "id": 20,
+      "nombre": "Operaciones Unitarias"
+    },
+    "periodo": "2025-2",
+    "docente_id": 1,
+    "cupos_totales": 1,
+    "inscritos": [1],
+    "horario": [
+      {
+        "dia": "Miércoles",
+        "hora_inicio": 700,
+        "hora_fin": 1000,
+        "salon": "Q-205"
+      }
+    ]
   }
 ]

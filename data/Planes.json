@@ -9,43 +9,50 @@
         "id": 9,
         "nombre": "Cálculo Diferencial",
         "creditos": 4,
-        "prerrequisitos": []
+        "prerrequisitos": [],
+        "semestre_sugerido": 2
       },
       {
         "id": 10,
         "nombre": "Cálculo Integral",
         "creditos": 4,
-        "prerrequisitos": [9]
+        "prerrequisitos": [9],
+        "semestre_sugerido": 3
       },
       {
         "id": 11,
         "nombre": "Algebra Lineal",
         "creditos": 3,
-        "prerrequisitos": [9]
+        "prerrequisitos": [9],
+        "semestre_sugerido": 3
       },
       {
         "id": 1,
         "nombre": "Bases de Datos I",
         "creditos": 3,
-        "prerrequisitos": [11]
+        "prerrequisitos": [11],
+        "semestre_sugerido": 4
       },
       {
         "id": 2,
         "nombre": "Bases de Datos II",
         "creditos": 4,
-        "prerrequisitos": [1]
+        "prerrequisitos": [1],
+        "semestre_sugerido": 5
       },
       {
         "id": 12,
         "nombre": "Mecánica Clásica",
         "creditos": 4,
-        "prerrequisitos": [10]
+        "prerrequisitos": [10],
+        "semestre_sugerido": 4
       },
       {
         "id": 13,
         "nombre": "Electromagnetismo",
         "creditos": 4,
-        "prerrequisitos": [12]
+        "prerrequisitos": [12],
+        "semestre_sugerido": 5
       }
     ]
   },
