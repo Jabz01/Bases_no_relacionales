@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .pensum-subject-box {
+            border: 1px solid black;
+            background: linear-gradient(0deg, rgba(131, 155, 42, 0.36) 0%, rgba(199, 186, 87, 0.17) 100%);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 0.2em 0.5em;
+            width: fit-content;
+            max-width: 220px;
+        }
+
+        .pensum-subject-box.C1 {
+            background: linear-gradient(0deg, rgba(42, 155, 91, 0.36) 0%, rgba(87, 145, 199, 0.17) 100%);
+        }
+
+        .pensum-subject-box.C2 {
+            background: linear-gradient(0deg, rgba(63, 42, 155, 0.36) 0%, rgba(175, 87, 199, 0.17) 100%);
+        }
+
+        .pensum-subject-box.C3 {
+            background: linear-gradient(0deg, rgba(155, 42, 102, 0.36) 0%, rgba(199, 122, 87, 0.17) 100%);
+        }
+
+        .pensum-subject-box>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            gap: 3px;
+        }
+
+        .pensum-subject-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: medium;
+        }
+
+        .pensum-subject-star-icon {
+            width: 13px;
+        }
+
+        .pensum-subject-credits-number {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #pensum-header {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e87422;
+            color: white;
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 0.3em 0.5em;
+        }
+
+        #pensum-outer-container {
+            border: 3px solid #e87422;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        #pensum-inner-container {
+            display: flex;
+            flex-direction: row;
+            margin: 0.7em;
+            gap: 0.4em;
+            overflow-x: scroll;
+        }
+
+        .pensum-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6em;
+            margin: 0.7em;
+        }
+    </style>
+    <main id="pensum-outer-container">
+        <header id="pensum-header">-</header>
+        <article id="pensum-inner-container">
+            -
+        </article>
+    </main>
+    <script>
+        const planXXX = {
+            "id": 1,
+            "nombre": "Ingeniería de Sistemas y Computación",
+            "creditos_totales": 160,
+            "version": "2025-1",
+            "materias": [
+                {
+                    "id": 9,
+                    "nombre": "Cálculo Diferencial",
+                    "creditos": 4,
+                    "prerrequisitos": [],
+                    "semestre_sugerido": 2
+                },
+                {
+                    "id": 10,
+                    "nombre": "Cálculo Integral",
+                    "creditos": 4,
+                    "prerrequisitos": [9],
+                    "semestre_sugerido": 3
+                },
+                {
+                    "id": 11,
+                    "nombre": "Algebra Lineal",
+                    "creditos": 3,
+                    "prerrequisitos": [9],
+                    "semestre_sugerido": 3
+                },
+                {
+                    "id": 1,
+                    "nombre": "Bases de Datos I",
+                    "creditos": 3,
+                    "prerrequisitos": [11],
+                    "semestre_sugerido": 4
+                },
+                {
+                    "id": 2,
+                    "nombre": "Bases de Datos II",
+                    "creditos": 4,
+                    "prerrequisitos": [1],
+                    "semestre_sugerido": 5
+                },
+                {
+                    "id": 12,
+                    "nombre": "Mecánica Clásica",
+                    "creditos": 4,
+                    "prerrequisitos": [10],
+                    "semestre_sugerido": 4
+                },
+                {
+                    "id": 13,
+                    "nombre": "Electromagnetismo",
+                    "creditos": 4,
+                    "prerrequisitos": [12],
+                    "semestre_sugerido": 5
+                },
+                {
+                    "id": 14,
+                    "nombre": "Cátedra de género con énfasis en marxismo leninista.",
+                    "creditos": 1,
+                    "prerrequisitos": [],
+                    "semestre_sugerido": 5
+                },
+                {
+                    "id": 15,
+                    "nombre": "Cátedra de género con énfasis en marxismo leninista II.",
+                    "creditos": 2,
+                    "prerrequisitos": [14, 12],
+                    "semestre_sugerido": 5
+                }
+            ]
+        }
+
+        function subject_box_HTML(nombre, creditos) {
+            return `<div class="pensum-subject-box C${creditos}">
+                        <span class="pensum-subject-title">${nombre}</span>
+                        <div>
+                            <img class="pensum-subject-star-icon" src="star.svg" />
+                            <span class="pensum-subject-credits-number">${creditos}</span>
+                        </div>
+                    </div>`
+        }
+
+        function pensum_column_HTML(subjs) {
+            return `
+            <div class="pensum-column">${subjs}</div>
+            `
+        }
+
+        function pensum_HTML(plan)
+        {
+            penInnerCnt_innerHTML = "";
+            penHeader_innerHTML = plan.nombre;
+
+            let materias = plan.materias;
+
+            let setDepth = (materia, depth) => {
+                if (!("depth" in materia)) {
+                    materia.depth = -1;
+                }
+
+                if (materia.depth < depth) {
+                    materia.depth = depth;
+
+                    for (const mat of materias) {
+                        if (mat.prerrequisitos.includes(materia.id)) {
+                            setDepth(mat, depth + 1);
+                        }
+                    }
+                }
+            }
+
+            for (const materia of materias) {
+                if (materia.prerrequisitos.length == 0) {
+                    setDepth(materia, 0);
+                }
+            }
+
+            let contenedores = {}
+
+            for (const materia of materias) {
+                if (!(materia.depth in contenedores)) {
+                    contenedores[materia.depth] = ""
+                }
+                contenedores[materia.depth] += subject_box_HTML(materia.nombre, materia.creditos);
+            }
+
+            for (const depth of Object.keys(contenedores)) {
+                penInnerCnt_innerHTML += pensum_column_HTML(contenedores[depth])
+            }
+
+            return {
+                penInnerCnt_innerHTML,
+                penHeader_innerHTML
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let penHeader = document.getElementById("pensum-header")
+            let penInnerCnt = document.getElementById("pensum-inner-container")
+
+            let pen_html = pensum_HTML(planXXX);
+
+            penHeader.innerHTML = pen_html.penHeader_innerHTML;
+            penInnerCnt.innerHTML = pen_html.penInnerCnt_innerHTML;
+        });
+    </script>
+</body>
+
+</html>
