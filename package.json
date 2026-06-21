@@ -1,0 +1,27 @@
+{
+  "name": "bases_no_relacionales",
+  "version": "1.0.0",
+  "description": "Si",
+  "main": "queries-de-alex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jabz01/Bases_no_relacionales.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jabz01/Bases_no_relacionales/issues"
+  },
+  "homepage": "https://github.com/Jabz01/Bases_no_relacionales#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongodb": "^7.3.0"
+  }
+}

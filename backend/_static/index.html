@@ -96,78 +96,6 @@
         </article>
     </main>
     <script>
-        const planXXX = {
-            "id": 1,
-            "nombre": "Ingeniería de Sistemas y Computación",
-            "creditos_totales": 160,
-            "version": "2025-1",
-            "materias": [
-                {
-                    "id": 9,
-                    "nombre": "Cálculo Diferencial",
-                    "creditos": 4,
-                    "prerrequisitos": [],
-                    "semestre_sugerido": 2
-                },
-                {
-                    "id": 10,
-                    "nombre": "Cálculo Integral",
-                    "creditos": 4,
-                    "prerrequisitos": [9],
-                    "semestre_sugerido": 3
-                },
-                {
-                    "id": 11,
-                    "nombre": "Algebra Lineal",
-                    "creditos": 3,
-                    "prerrequisitos": [9],
-                    "semestre_sugerido": 3
-                },
-                {
-                    "id": 1,
-                    "nombre": "Bases de Datos I",
-                    "creditos": 3,
-                    "prerrequisitos": [11],
-                    "semestre_sugerido": 4
-                },
-                {
-                    "id": 2,
-                    "nombre": "Bases de Datos II",
-                    "creditos": 4,
-                    "prerrequisitos": [1],
-                    "semestre_sugerido": 5
-                },
-                {
-                    "id": 12,
-                    "nombre": "Mecánica Clásica",
-                    "creditos": 4,
-                    "prerrequisitos": [10],
-                    "semestre_sugerido": 4
-                },
-                {
-                    "id": 13,
-                    "nombre": "Electromagnetismo",
-                    "creditos": 4,
-                    "prerrequisitos": [12],
-                    "semestre_sugerido": 5
-                },
-                {
-                    "id": 14,
-                    "nombre": "Cátedra de género con énfasis en marxismo leninista.",
-                    "creditos": 1,
-                    "prerrequisitos": [],
-                    "semestre_sugerido": 5
-                },
-                {
-                    "id": 15,
-                    "nombre": "Cátedra de género con énfasis en marxismo leninista II.",
-                    "creditos": 2,
-                    "prerrequisitos": [14, 12],
-                    "semestre_sugerido": 5
-                }
-            ]
-        }
-
         function subject_box_HTML(nombre, creditos) {
             return `<div class="pensum-subject-box C${creditos}">
                         <span class="pensum-subject-title">${nombre}</span>
@@ -232,15 +160,25 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            let penHeader = document.getElementById("pensum-header")
-            let penInnerCnt = document.getElementById("pensum-inner-container")
+    document.addEventListener('DOMContentLoaded', () => {
+        let penHeader = document.getElementById("pensum-header");
+        let penInnerCnt = document.getElementById("pensum-inner-container");
 
-            let pen_html = pensum_HTML(planXXX);
+        penInnerCnt.innerHTML = "<p>Cargando plan de estudios...</p>";
 
-            penHeader.innerHTML = pen_html.penHeader_innerHTML;
-            penInnerCnt.innerHTML = pen_html.penInnerCnt_innerHTML;
-        });
+        fetch("http://localhost:3000/api/arbol-completo")
+            .then(respuesta => respuesta.json()) 
+            .then(plan => {
+                let pen_html = pensum_HTML(plan);
+
+                penHeader.innerHTML = pen_html.penHeader_innerHTML;
+                penInnerCnt.innerHTML = pen_html.penInnerCnt_innerHTML;
+            })
+            .catch(error => {
+                console.error("Error al conectar con la base de datos:", error);
+                penInnerCnt.innerHTML = "<p>Error al cargar las materias.</p>";
+            });
+    });
     </script>
 </body>
 

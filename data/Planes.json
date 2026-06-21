@@ -53,7 +53,22 @@
         "creditos": 4,
         "prerrequisitos": [12],
         "semestre_sugerido": 5
+      },
+      {
+          "id": 14,
+          "nombre": "Cátedra de género con énfasis en marxismo leninista.",
+          "creditos": 1,
+          "prerrequisitos": [],
+          "semestre_sugerido": 5
+      },
+      {
+          "id": 15,
+          "nombre": "Cátedra de género con énfasis en marxismo leninista II.",
+          "creditos": 2,
+          "prerrequisitos": [14, 12],
+          "semestre_sugerido": 5
       }
+  
     ]
   },
   {
