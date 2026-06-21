@@ -1,0 +1,79 @@
+.pensum-subject-box {
+    border: 1px solid black;
+    background: linear-gradient(0deg, rgba(131, 155, 42, 0.36) 0%, rgba(199, 186, 87, 0.17) 100%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em 0.5em;
+    width: fit-content;
+    max-width: 220px;
+}
+
+.pensum-subject-box.C1 {
+    background: linear-gradient(0deg, rgba(42, 155, 91, 0.36) 0%, rgba(87, 145, 199, 0.17) 100%);
+}
+
+.pensum-subject-box.C2 {
+    background: linear-gradient(0deg, rgba(63, 42, 155, 0.36) 0%, rgba(175, 87, 199, 0.17) 100%);
+}
+
+.pensum-subject-box.C3 {
+    background: linear-gradient(0deg, rgba(155, 42, 102, 0.36) 0%, rgba(199, 122, 87, 0.17) 100%);
+}
+
+.pensum-subject-box>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 3px;
+}
+
+.pensum-subject-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.pensum-subject-star-icon {
+    width: 13px;
+}
+
+.pensum-subject-credits-number {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pensum-header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff6d04;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 0.3em 0.5em;
+}
+
+#pensum-outer-container {
+    border: 3px solid #ff6d04;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#pensum-inner-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0.7em;
+    gap: 0.4em;
+    overflow-x: scroll;
+}
+
+.pensum-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    margin: 0.7em;
+}

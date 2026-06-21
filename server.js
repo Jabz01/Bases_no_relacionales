@@ -1,22 +1,26 @@
+// Get env vars
+require('dotenv').config();
+// Import libs
 const express = require('express');
-const { MongoClient } = require('mongodb');
 const cors = require('cors');
+const path = require('path')
+
+const { MongoClient } = require('mongodb');
 
 const app = express();
 app.use(cors());
 
-const url = "mongodb://127.0.0.1:27017"; 
-const client = new MongoClient(url);
+const client = new MongoClient(process.env.MONGODB_URL);
 
-// Creamos la "Ruta" o URL que tu HTML va a consultar
-app.get('/api/arbol-completo', async (req, res) => {
+app.get('/api/arbol-completo/:id', async (req, res) => {
   try {
+    const plan_id = parseInt(req.params.id ?? "1");
     await client.connect();
-    const db = client.db('dblorpen'); 
+    const db = client.db(process.env.DB_NAME); 
     const planes = db.collection('planes');
 
     const arbol = await planes.findOne({
-        id:1
+        id: plan_id
     });
 
     res.json(arbol); 
@@ -27,7 +31,8 @@ app.get('/api/arbol-completo', async (req, res) => {
   }
 });
 
-// Encendemos el servidor en el puerto 3000
-app.listen(3000, () => {
-  console.log("Servidor corriendo en http://localhost:3000");
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${process.env.PORT}`);
 });

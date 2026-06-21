@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBLorpen</title>
+    <link rel="stylesheet" href="./pensum.css">
+</head>
+
+<body>
+    <script src="./consts.js" ></script>
+    <script src="./pensum.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let penHeader = document.getElementById("pensum-header");
+            let penInnerCnt = document.getElementById("pensum-inner-container");
+
+            penInnerCnt.innerHTML = "<p>Cargando plan de estudios...</p>";
+
+            get_json_for_plan(1)
+                .then(plan => {
+                    let pen_html = pensum_HTML(plan);
+
+                    penHeader.innerHTML = pen_html.penHeader_innerHTML;
+                    penInnerCnt.innerHTML = pen_html.penInnerCnt_innerHTML;
+                })
+                .catch(error => {
+                    console.error("Error al conectar con la base de datos:", error);
+                    penInnerCnt.innerHTML = "<p>Error al cargar las materias.</p>";
+                });
+        });
+    </script>
+
+    <main id="pensum-outer-container">
+        <header id="pensum-header">-</header>
+        <article id="pensum-inner-container">
+            -
+        </article>
+    </main>
+
+    Bienvenido perro hpts
+</body>
+
+</html>
