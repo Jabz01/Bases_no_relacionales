@@ -19,17 +19,37 @@ app.get('/api/arbol-completo/:id', async (req, res) => {
     const db = client.db(process.env.DB_NAME); 
     const planes = db.collection('planes');
 
-    const arbol = await planes.findOne({
+    const result = await planes.findOne({
         id: plan_id
     });
 
-    res.json(arbol); 
+    res.json(result); 
 
   } catch (error) {
     console.error(error);
     res.status(500).send("Error en el servidor");
   }
 });
+
+app.get('/api/materia/:id', async (req, res) => {
+  try {
+    const mat_id = parseInt(req.params.id ?? "1");
+    await client.connect();
+    const db = client.db(process.env.DB_NAME); 
+    const materias = db.collection('materias');
+
+    const result = await materias.findOne({
+        id: mat_id
+    });
+
+    res.json(result); 
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error en el servidor");
+  }
+});
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 

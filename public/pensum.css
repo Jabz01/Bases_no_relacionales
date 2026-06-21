@@ -7,6 +7,11 @@
     padding: 0.2em 0.5em;
     width: fit-content;
     max-width: 220px;
+    pointer-events: auto;
+}
+
+.pensum-subject-box:hover {
+    opacity: 0.7;
 }
 
 .pensum-subject-box.C1 {
@@ -53,7 +58,6 @@
 
 #pensum-outer-container {
     border: 3px solid #ff6d04;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -67,7 +71,6 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0.7em;
-    gap: 0.4em;
     overflow-x: scroll;
 }
 
@@ -76,4 +79,40 @@ body {
     flex-direction: column;
     gap: 0.6em;
     margin: 0.7em;
+}
+
+.pensum-column:not(:last-child) {
+    border-right: 2px dotted black;
+    padding-right: 1.1em;
+    margin-right: 0px;
+}
+
+.pensum-column:not(:first-child) {
+    padding-left: 1.1em;
+    margin-left: 0px;
+}
+
+#subject-info-outer-container {
+    border: 3px solid #7b7b7b;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+#subject-info-header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7b7b7b;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 0.2em 0.4em;
+}
+
+#subject-info-inner-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.7em;
+}
+
+#subject-info-inner-container p {
+    margin: 0px;
 }

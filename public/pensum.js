@@ -1,11 +1,11 @@
-function subject_box_HTML(nombre, creditos) {
-    return `<div class="pensum-subject-box C${creditos}">
+function subject_box_HTML(id, nombre, creditos, func) {
+    return `<button type="button" onclick="${func}(${id})" class="pensum-subject-box C${creditos}">
                         <span class="pensum-subject-title">${nombre}</span>
                         <div>
                             <img class="pensum-subject-star-icon" src="star.svg" />
                             <span class="pensum-subject-credits-number">${creditos}</span>
                         </div>
-                    </div>`
+                    </button>`
 }
 
 function pensum_column_HTML(subjs) {
@@ -14,7 +14,7 @@ function pensum_column_HTML(subjs) {
             `
 }
 
-function pensum_HTML(plan) {
+function pensum_HTML(plan, subject_callback) {
     penInnerCnt_innerHTML = "";
     penHeader_innerHTML = plan.nombre;
 
@@ -48,7 +48,7 @@ function pensum_HTML(plan) {
         if (!(materia.depth in contenedores)) {
             contenedores[materia.depth] = ""
         }
-        contenedores[materia.depth] += subject_box_HTML(materia.nombre, materia.creditos);
+        contenedores[materia.depth] += subject_box_HTML(materia.id, materia.nombre, materia.creditos, subject_callback);
     }
 
     for (const depth of Object.keys(contenedores)) {
@@ -59,10 +59,4 @@ function pensum_HTML(plan) {
         penInnerCnt_innerHTML,
         penHeader_innerHTML
     }
-}
-
-function get_json_for_plan(id)
-{
-    return fetch(`${PROCESS_CONSTS.api_url}/arbol-completo/${id}`)
-                .then(respuesta => respuesta.json())
 }

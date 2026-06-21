@@ -9,18 +9,58 @@
 </head>
 
 <body>
+    <section id="pensum-outer-container">
+        <header id="pensum-header">-</header>
+        <article id="pensum-inner-container">
+            -
+        </article>
+    </section>
+
+    <br/>
+
+    <section id="subject-info-outer-container">
+        <header id="subject-info-header">-</header>
+        <article id="subject-info-inner-container">
+            Seleccione alguna materia
+        </article>
+    </section>
+
     <script src="./consts.js" ></script>
     <script src="./pensum.js"></script>
     <script>
+        function show_subject_detail(id)
+        {
+            let penHeader = document.getElementById("subject-info-header");
+            let penInnerCnt = document.getElementById("subject-info-inner-container");
+
+            fetch(`${PROCESS_CONSTS.api_url}/materia/${id}`)
+                .then(respuesta => respuesta.json())
+                .then(mat => {
+                    console.log(mat);
+                    penHeader.innerHTML = mat.nombre;
+                    penInnerCnt.innerHTML = `
+                    <p>Creditos: ${mat.creditos}</p>
+                    <p>Semestre sugerido: ${mat.semestre_sugerido}</p>
+                    <p>Planes: ${mat.planes.map(p => `[${p.id}] ${p.nombre}`).join(", ")}</p>
+                    `;
+                })
+                .catch(error => {
+                    console.error("Error al conectar con la base de datos:", error);
+                    penInnerCnt.innerHTML = "<p>Error al cargar las materias.</p>";
+                });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            let id = 1;
             let penHeader = document.getElementById("pensum-header");
             let penInnerCnt = document.getElementById("pensum-inner-container");
 
             penInnerCnt.innerHTML = "<p>Cargando plan de estudios...</p>";
 
-            get_json_for_plan(1)
+            fetch(`${PROCESS_CONSTS.api_url}/arbol-completo/${id}`)
+                .then(respuesta => respuesta.json())
                 .then(plan => {
-                    let pen_html = pensum_HTML(plan);
+                    let pen_html = pensum_HTML(plan, "show_subject_detail");
 
                     penHeader.innerHTML = pen_html.penHeader_innerHTML;
                     penInnerCnt.innerHTML = pen_html.penInnerCnt_innerHTML;
@@ -31,15 +71,6 @@
                 });
         });
     </script>
-
-    <main id="pensum-outer-container">
-        <header id="pensum-header">-</header>
-        <article id="pensum-inner-container">
-            -
-        </article>
-    </main>
-
-    Bienvenido perro hpts
 </body>
 
 </html>
