@@ -116,3 +116,9 @@ body {
 #subject-info-inner-container p {
     margin: 0px;
 }
+
+.subject-info-group-container {
+    border: 1px solid black;
+    padding: 0.5em 0.7em;
+    margin-top: 0.5em;
+}

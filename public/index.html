@@ -16,7 +16,7 @@
         </article>
     </section>
 
-    <br/>
+    <br />
 
     <section id="subject-info-outer-container">
         <header id="subject-info-header">-</header>
@@ -25,24 +25,67 @@
         </article>
     </section>
 
-    <script src="./consts.js" ></script>
+    <script src="./consts.js"></script>
     <script src="./pensum.js"></script>
     <script>
-        function show_subject_detail(id)
-        {
+        const user_id = 1;
+        const pensum_id = 1;
+        let grupos;
+        let materia;
+        let pensum;
+
+        function add_materia(grupo_id) {
+            console.log(pensum, materia, grupo_id);
+
+            fetch(`${PROCESS_CONSTS.api_url}/inscribir`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    grupo_id,
+                    user_id,
+                    pensum_id
+                })
+            })
+        }
+
+        function intHoratoString(hora) {
+            return `${Math.floor(hora / 100)}:${hora % 100}`;
+        }
+
+        function show_subject_detail(id) {
             let penHeader = document.getElementById("subject-info-header");
             let penInnerCnt = document.getElementById("subject-info-inner-container");
 
             fetch(`${PROCESS_CONSTS.api_url}/materia/${id}`)
                 .then(respuesta => respuesta.json())
                 .then(mat => {
-                    console.log(mat);
+                    materia = mat;
+
                     penHeader.innerHTML = mat.nombre;
-                    penInnerCnt.innerHTML = `
-                    <p>Creditos: ${mat.creditos}</p>
-                    <p>Semestre sugerido: ${mat.semestre_sugerido}</p>
-                    <p>Planes: ${mat.planes.map(p => `[${p.id}] ${p.nombre}`).join(", ")}</p>
-                    `;
+
+                    fetch(`${PROCESS_CONSTS.api_url}/grupos-materia/${id}`)
+                        .then(respuesta => respuesta.json())
+                        .then(gpr => {
+                            grupos = gpr;
+                            console.log(grupos);
+                            penInnerCnt.innerHTML = `
+                            <p>Creditos: ${mat.creditos}</p>
+                            <p>Semestre sugerido: ${mat.semestre_sugerido}</p>
+                            <p>Planes: ${mat.planes.map(p => `[${p.id}] ${p.nombre}`).join(", ")}</p>
+                            ${grupos.map(g => `
+                            <div class="subject-info-group-container" >
+                                <p>Inscritos: ${g.inscritos.length}/${g.cupos_totales}</p>
+                                <p>${g.horario.map(h => `[${h.dia}]: ${intHoratoString(h.hora_inicio)}-${intHoratoString(h.hora_fin)}`).join("</br>")}</p>
+                                <button onclick="add_materia(${g.id})">Inscribir</button>
+                            </div>
+                            `).join("")}
+                            `;
+                        })
+                        .catch(error => {
+                            console.error("Error al conectar con la base de datos:", error);
+                        });
                 })
                 .catch(error => {
                     console.error("Error al conectar con la base de datos:", error);
@@ -51,15 +94,16 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            let id = 1;
             let penHeader = document.getElementById("pensum-header");
             let penInnerCnt = document.getElementById("pensum-inner-container");
 
             penInnerCnt.innerHTML = "<p>Cargando plan de estudios...</p>";
 
-            fetch(`${PROCESS_CONSTS.api_url}/arbol-completo/${id}`)
+            fetch(`${PROCESS_CONSTS.api_url}/arbol-completo/${pensum_id}`)
                 .then(respuesta => respuesta.json())
                 .then(plan => {
+                    pensum = plan
+
                     let pen_html = pensum_HTML(plan, "show_subject_detail");
 
                     penHeader.innerHTML = pen_html.penHeader_innerHTML;
